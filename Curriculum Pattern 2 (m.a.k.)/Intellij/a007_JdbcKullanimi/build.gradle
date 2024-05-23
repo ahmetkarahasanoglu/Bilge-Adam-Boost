@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.ahmet'
+version = 'v.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) { // Türkçe karakter dil desteğiyle ilgili problemi bu kod bloğuyla çözdük (Java'dan Postgresql'e göndererek kaydettiğimiz verilerde türkçe karakterlerde problem oluyordu).
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/org.postgresql/postgresql                   // For JDBC connection with Postgresql
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.7.1' // Normally, group should refer to our company name (here package name which is 'com.ahmet'). And name refers to our project name (Jdbc Kullanımı)
+
+}
+

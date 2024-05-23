@@ -1,0 +1,10 @@
+REDIS: Veritabanının RAM üzerinde çalıştırılmasını, veriye erişimin çok hızlı olmasını sağlar.
+- Redis'i Docker'da çalıştırırız. Docker hub'da 'redis' başlığında açıklamalar mevcut. Windows PowerShell'de şu komutu çalıştırırız (Docker'da redis'i çalıştırmak için):
+> docker run --name [nameToUseInDocker] -d -p 6379:6379 redis
+
+
+ELASTIC_SEARCH: index'leme yöntemiyle hızlı arama sağlar. hub.docker.com'da bilgi.
+'--> Komutlar (PowerShell):
+> docker network create somenetwork
+
+> docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms512m -Xmx2048m" elasticsearch:tag  --> Burda 'tag' yerine elasticsearch versiyonunu yazıyoruz(7.17.3 yazdık biz (spring boot 2.7.9 ile uyumlu olan versiyon buydu)). (Xms ve Xmx değerleri ile kullanılacak minimum ve maximum RAM değerlerini belirliyoruz; bunu yapmazsak default'u çok yüksek olduğundan bilgisayarı kitler).

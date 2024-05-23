@@ -1,0 +1,11 @@
+ POLIMORPHISM - ÇOK BİÇİMLİLİK  - [Bir örnek: hayvanın at gibi davranması, kedi gibi, köpek gibi, kuş gibi davranması]
+* Not: Polimorfizm kullanırken, main metot'ta new'lenerek nesne oluşturulmasına müteakip, kullanılacak olan metodun super class'da tanımlanan bir metot olması gerekir.
+    Polimorfizm kalıtım ile kullanılır.
+Bir toprak ağası olduğumuzu düşünelim. Büyükbaş hayvanlarımız, küçükbaş
+hayvanlarımız ve kümes hayvanlarımız var. Ve marabalarımız var.
+Marabalara şöyle mi demek mantıklı: "Büyükbaş hayvanların bakımı
+yapılacak, küçükbaş hayvanların bakımı yapılacak, kümes hayvanlarının
+bakımı yapılacak". Yoksa şöyle mi demek mantıklı: "Hayvanların bakımı 
+yapılacak". İkincisi daha mantıklı. Polimorfizm buna benzer.
+ 
+* Not: Polimorfizm, 'extends' ile miras alınarak yapılabileceği gibi, 'implements' ile interface'i uygulayarak da yapılabilir.

@@ -1,0 +1,20 @@
+/*
+	 * 'List interface'
+	 * 1- Oluşturmak istediğiniz type'a göre liste oluşturur.
+	 * 2- Generic type'a sahip bir interface'dir.
+	 */
+
+	List<Musteri> mList = new ArrayList<Musteri>();
+	List<Urun> uList = new ArrayList<Urun>();
+	List<Satis> sList = new ArrayList<Satis>();
+
+--------------------------------------
+COLLECTIONS-ORTALAMA KULLANIM YOĞUNLUĞU:
+Bir projede genelde:
+* ArrayList -> %90
+* Queue     -> % 1
+* Stack	    -> % 1
+* Set	    -> % 2
+* Map	    -> % 6
+
+--------------------------------------

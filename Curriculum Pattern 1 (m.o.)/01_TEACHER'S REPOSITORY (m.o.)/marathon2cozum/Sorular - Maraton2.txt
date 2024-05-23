@@ -1,0 +1,9 @@
+1) Bir kitap kiralama sisteminde şu verilenleri yapmanız beklenmektedir: OOP prensiplerine uygun olarak Kitap, Müşteri, Kasiyer ve Kiralama sınıflarını isteğinize göre tanımlayınız. Kiralama işlemlerini yapabilen içinde kiralamaYap, kitapAra, müşteriAra, kiralananKitapListesi metotlarınınolduğu bir sınıf yazınız. Tüm bu yapıyı oluştururken katmanlı yapıya olduğunca riayet ed,iniz. Ayrıca Kalıtım, Encapsulation, Constructor, Interface, Final, Static gibi kavramları da kullanınız.
+
+2) Elimizde 1000 adet kiralaması yapılmış kitap bulunmaktadır. Bu kitaplarla ilgili olarak aşağıdaki işlemlerin yapıldığı metotları yazalım:
+* id bilgisi verilmiş olan kitap kim tarafından kiralanmış?
+* adı verilen kitap daha önce kimler tarafından kiralanmış?
+* ahm ile başlayan müşterilerin listesini bulunuz.
+* id verilen müşterinin kiraladığı kitapların listesini bulunuz.
+
+3) Bir kod bloğu içinde oluşabilecek hataların yakalayan ve bu hataları bir log dosyasına kayıt eden kodlamaya örnek veriniz.

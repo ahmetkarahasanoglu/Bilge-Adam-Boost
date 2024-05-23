@@ -1,0 +1,21 @@
+MongoDB'yi Docker'da açmak:
+> docker run --name nameToUseInDocker -e MONGO_INITDB_ROOT_USERNAME=user -e MONGO_INITDB_ROOT_PASSWORD=root -p 27017:27017 -d mongo
+----
+Daha sonra MongoDB Compass masaüstü uygulamasında:
+New Connection -> mongodb://localhost:27017
+Advanced Options -> Authentication -> Username/Password -> username ve password gir. -> Connect butonu. -> Database'ler görünür.
+----
+Not: MongoDB'deki collection'lar, postgresql'deki table'lara karşılık gelir.
+---------------------------------------
+---------------------------------------
+MongoDB Compass'ta Mongosh komut ekranını (en altta siyah bir satır) açıp database kullancısı gir:
+> use userdb
+> db.createUser({user:"java6user",pwd:"root",roles:["readWrite","dbAdmin"]})
+---
+daha sonra en üstten -> Connect -> Disconnect.
+New Connection -> URI: mongodb://localhost:27017
+Advanced Options -> Authentication -> Username/Password
+Username: java6user
+Password: root
+Authentication Database: userdb
+Connect butonuna bas.

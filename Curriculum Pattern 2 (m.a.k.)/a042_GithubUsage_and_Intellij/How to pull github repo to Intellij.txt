@@ -1,0 +1,4 @@
+When you want to clone a github project to Intellij; copy the link, such as:
+https://github.com/bilgejava6/egitimrepo.git
+
+then, in Intellij, in project opening window, click 'get from VCS', paste the link; it will pull (download) the files from github.

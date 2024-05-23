@@ -1,0 +1,2 @@
+Bu klasördeki .yml dosyaları şurada yazılmalı:
+Google Cloud Shell Editör'de soldaki file explorer'da bir klasör oluşturup (biz java6 dedik), içine .yml dosyaları oluşturup yazılmalı

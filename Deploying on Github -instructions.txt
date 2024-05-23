@@ -1,0 +1,43 @@
+* Your Vite project must be installed earlier on;
+$ npm create vite@latest
+
+* CREATE A NEW REPOSITORY ON GITHUB:
+  - My Repsitories -> Create new repository.
+Give a name to your repository and click on "Create repository".
+
+* ON YOUR TERMINAL:
+$ cd "your/project/directory"
+$ git init
+$ git add .
+$ git commit -m "add: initial files"
+$ git branch -M main
+$ git remote add origin https://github.com/ahmetkarahasanoglu/project-name.git
+$ git push -u origin main
+
+* OPEN vite.config.ts file, inside the "export default defineConfig({"  add this line:
+base: "/your-project-name/"
+
+* Inside your project folder, add new folder: '.github' folder. --> inside that, add new folder "workflows" . --> inside that, add new file 'deploy.yml'
+Copy the code in the link below, paste it into the 'deploy.yml' file: https://github.com/ErickKS/vite-deploy --> the code starts with "name: Deploy".
+
+* On Terminal, in your project directory:
+$ git add .
+$ git commit -m "your note forThis push"
+$ git push
+
+* On Github, in your project repository;
+click "Settings" tab --> Actions(on the left column menu) --> General --> Workflow permissions(on the bottom of the page) - here click the 'Read and write permissions'. --> 'Save' button.
+* Actions tab --> watch the deployment: when workflow stops processing, click on it. In the newly opened page, on the right side click "Re-run jobs -> Re-run failed jobs.
+* 'Settings' tab --> Pages(on left column menu) --> branch(on center of page) --> 'gh pages' --> 'Save' button.
+* Actions tab --> watch the deployment complete.
+* 'Settings' tab --> Pages --> click on the link of your deployed site. Your site opens.
+
+* Here in your deployed web page, if images are not visible, you may need to edit the directories in your project codes.
+- And to sync the new changes; on terminal:
+$ git add .
+$ git commit -m "fix: your fixed bug for info"
+$ git push
+
+* Check the 'Actions' tab on github to see the deployment complete (modification to take effect).
+
+On Github, in your project: Settings, Pages, click your site link, refresh your site.

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clusterip-postgresql
+spec:
+  selector:
+    team: developer-postgre # Deployment_postgresql.yml'de yazdığımız 'team'i yazıyoruz.
+  type: ClusterIP # (Not: postgresql'i dışarı açmak için buraya 'LoadBalancer' yazmamız gerekir - mustafa hocanın dersinden. Daha sonra 'kubectl apply -f' yaptıktan sonra 'kubectl get services' yazdığımızda bir External-IP'sinin olduğunu görürüz.)
+  ports:
+    - name: postgresql
+      port: 5432
+      targetPort: 5432

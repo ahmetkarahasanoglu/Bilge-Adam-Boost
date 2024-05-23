@@ -1,0 +1,2 @@
+* Clean Code - Robert C. Martin [başucu kitabı]
+* OCP Oracle Certified Professional Java SE 17 Developer Study Guide - Jeanne Boyarsky, Scott Selikoff (Java Sertifikası almak için Java Soruları - 1000 sayfa)

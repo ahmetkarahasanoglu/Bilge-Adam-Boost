@@ -1,0 +1,15 @@
+BİR UYGULAMANIN DEPLOY EDİLME AŞAMALARI:
+1- Gradle ile build alıyoruz.
+2- Gradle ile buildDependents alıyoruz.
+3- build -> libs -> altına projemiz *.jar olarak çıktılanıyor
+DETAYLARI:
+* Java uygulamamızı Jar halinde tıklanıp açılabilecek bir program yapmak için: Intellij'de sağda Gradle ikonu -> Tasks -> build -> build (çalışacak, terminalde görünür).
+Daha sonra, aynı yerde 'buildDependents' (bağımlılıkları inject edecek).
+Sonra, sol sütunda: build -> libs -> MyApp-0.0.1-SNAPSHOT.jar (çalıştırılabilir uygulamamız budur) -> sağ tuş -> Open In -> Explorer (bulunduğu klasörü pencere olarak açacak). Jar dosyamıza çift tıklayıp uygulamayı çalıştırıyoruz (Windows görev yöneticisinde de görünür: 'Java Platform SE binary' isminde.) -> browser adres çubuğuna: localhost:[portnumarası]/swagger-ui/index.html yazarak swagger menüsünü görebiliyoruz.
+- Not: Jar halindeki uygulama ikonumuza 'buraya ayıkla' diyerek çıkartıp içeriğine bakabiliyoruz.
+
+BİR JAR DOSYASININ ÇALIŞMASI İÇİN GEREKLİ OLAN ŞEYLER:
+1- Jar dosyasının kendisi
+2- OS(işletim sistemi - linux, windows)
+3- Uygulamamızın kodlandığı jdk versiyonunun yüklenmesi
+4- Çift tıklanarak çalıştırılması.

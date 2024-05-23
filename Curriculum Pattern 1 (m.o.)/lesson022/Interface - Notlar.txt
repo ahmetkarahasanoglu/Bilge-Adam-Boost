@@ -1,0 +1,5 @@
+// NOT: Interface'lerle ilgili: 1'den fazla interface implement edebiliriz.
+// Inheritance'la ilgili: tek bir sınıftan extend edebiliriz.
+
+// NOT: Bir interface bir interface'i ancak extend edebilir,
+//      ama implement edemez.

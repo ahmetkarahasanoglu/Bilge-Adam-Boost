@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clusterip-redis
+spec:
+  selector:
+    team: developer-redis # Deployment_redis.yml'de yazdığımız 'team'i yazıyoruz.
+  type: ClusterIP
+  ports:
+    - name: redis
+      port: 6379
+      targetPort: 6379

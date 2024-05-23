@@ -1,0 +1,5 @@
+* Dependency Inversion:
+her bir sınıftan nesne oluşturmuyoruz (MongoLogger, PostgreLogger sınıflarından). database'e log'la - 'log()' komutunu, ILogger interface'inden oluşturduğumuz bir referansa yaptırıyoruz (DatabaseLogger2 sınıfında). 
+Bu interface'in içinde 'log()' metodu var. Bu interface'i de zaten PostgreLogger ve MongoLogger sınıfında implement etmiştik.
+Bu şekilde bağımlılığı azaltıyoruz.
+(mustafa hocanın repository klasöründe doğru çözüm)

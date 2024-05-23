@@ -1,0 +1,4 @@
+MONGODB Commands:
+On terminal:
+> use postdb
+> db.createUser({user:"java6user",pwd:"root", roles:["readWrite","dbAdmin"]})

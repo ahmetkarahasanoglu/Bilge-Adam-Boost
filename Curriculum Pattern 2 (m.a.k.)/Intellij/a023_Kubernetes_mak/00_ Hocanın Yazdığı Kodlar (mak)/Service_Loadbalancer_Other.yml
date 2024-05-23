@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: load-balancer-other
+spec:
+  selector:
+    team: developer-gateway
+  type: LoadBalancer
+  ports:
+    - name: gateway
+      port: 80
+      targetPort: 80

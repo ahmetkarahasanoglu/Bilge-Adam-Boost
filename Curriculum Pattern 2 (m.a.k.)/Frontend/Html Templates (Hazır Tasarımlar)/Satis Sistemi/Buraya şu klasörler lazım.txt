@@ -1,0 +1,1 @@
+AdminLTE klasörünün içindeki 'dist' ve 'plugins' klasörlerini kopyalayıp buraya yapıştırdık.

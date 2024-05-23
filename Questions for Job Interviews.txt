@@ -1,0 +1,7 @@
+* Solid prensiplerini açıklayınız.
+* React isteyebilirler; önyüzle birleştirmeni isteyebilirler.
+* Algoritma soruları. Palindrom vs.
+* Sıralama (sort). (merge falan soruyolarmış??)
+* Map'lerle ilgili frekans sorabilirler - içinde ne kadar geçiyo falan.
+* Zaman karmaşıklığı. örneğin şu sıralama algoritmasının zaman karmaşıklığı nedir.
+* 

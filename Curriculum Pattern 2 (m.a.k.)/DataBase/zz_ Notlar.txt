@@ -1,0 +1,13 @@
+* Java'da yazdığımız katmanlı mimaride repository'deki entity'ler (musteri, odemeturu vs.), veritabanındaki tablolara tekabül eder. İsimlerini de aynı veririz.
+
+* Java ile Veritabanı'nın iletişiminde dil çevrimini (tercümanlığı) "Driver" denilen şey sağlar -> JDBC API (Java Data Base Connectivity). 
+Ekran kartı driver'ı gibi, aynı mantık.
+
+'--> adres(IP):kapı(port)/databasename
+     username: xxx
+     password: yyy
+
+* Veri tabanı yönetim işlemleri 2 şekilde yapılabilir:
+1- Komut satırı ile (cmd)
+2- PgAdmin Tool ile.
+bu şekilde veritabanı sunucusuna bağlanılır, istenilen işlemler yapılır.

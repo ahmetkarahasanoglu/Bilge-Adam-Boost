@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-configservergit
+spec:
+  replicas: 1 # number of pods that will run simultaneously
+  selector:
+    matchLabels:
+      team: developer-configservergit
+  template:
+    metadata:
+      name: pod-configservergit
+      labels:
+        team: developer-configservergit
+    spec:
+      containers:
+        - name: container-configservergit
+          image: javaboost2/java6configservergit:v.0.1 # (docker hub'ımızda java6configservergit'e tıklayıp burdaki "Docker commands" kısmında görebiliriz bu ismi. Versiyon ise aynı yerde "Tags" bölümünde en üstte yazan versiyondur)
+          resources:
+            limits:
+              cpu: 500m
+              memory: "1024Mi" # 1024Mi -> 1024 mb ram
+          ports:
+            - containerPort: 8888 # (configservergit.yml'de yazdığımız port)
+          env:
+            - name: ZIPKIN_URL # (configserver mikroservisimizdeki application.yml bunu kullanacak)
+              value: http://10.84.0.19:9411 # (iki noktanın öncesindeki ip adresini şurdan aldık: google cloud shell editörde:  kubectl get pods -o wide  -> burda deployment-zipkin'in karşısında yazan ip'yi kopyalayıp buraya yapıştırdık)
+            - name: GIT_JAVA6_KEY # (configserver mikroservisimizdeki application.yml'den yazdık)
+              value: asdfghjklşi # ([Bu, projemizin github token'ıyla aynı mı olmalı??] Github hesabımızda token oluşturup yazdık --> Github hesabımız -> Settings -> Developer settings -> Personal access tokens -> Tokens classic -> Generate new token -> generate new token classic -> 'Note' kısmını doldur, repo'yu check'le -> Generate token -> kopyala, buraya yapıştır)

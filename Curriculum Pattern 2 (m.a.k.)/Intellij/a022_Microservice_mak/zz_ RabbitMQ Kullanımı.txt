@@ -1,0 +1,16 @@
+## RabbitMQ Docker
+   Enables communication (data sending and receiving) between microservices with an enhanced queue structure.
+   Run this command on Windows Power Shell(here, username: user, password: root):
+docker run -d --hostname my-rabbit --name some-rabbit -p 15672:15672 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=root rabbitmq:3-management
+
+* localhost: 15672 --> write this on browser. This is RabbitMQ ui. Username: user, Password: root. On the 'Queues' tab you can see if any process is waiting on queue (regarding the data transfer between microservices).
+
+* RabbitMQ'da 3 çeşit gönderme var:
+  - Direct: ...
+  - Topic: Örneğin alıcının ingilizce veya türkçe kullanmasına göre mesaj gönderilmesi
+  - Fanout: Herkese yayın yapılması 
+
+* RabbitMQ Kullanımı
+- Gönderici mikroserviste 'config' package'ının içinde 'rabbitmq' package'ı oluşturulur; içinde RabbitMqConfig sınıfı oluşturulur.
+- com.ahmet -> rabbitmq package'ı oluşturulur -> içinde consumer, producer ve model package'ı oluşturulur.
+- Alıcı mikroserviste de bunlar oluşturulur.

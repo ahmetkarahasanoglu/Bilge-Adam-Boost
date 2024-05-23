@@ -1,0 +1,18 @@
+* Lazy initializing: delaying the creation or initialization of an object or resource until the point at which it is first needed.
+
+
+
+
+public class Ogretmen extends Calisan {
+
+	private ArrayList<Ders> dersListesi;
+	private boolean nobetciMi;
+
+
+// --- GETTERS AND SETTERS: ---
+	public ArrayList<Ders> getDersListesi() {
+		if(dersListesi == null) {  		// lazy initializing'miş. --> delaying the creation or initialization of an object or resource until the point at which it is first needed. 
+			this.dersListesi = new ArrayList<>();  // (Burda eğer null ise yenisini oluşturuyoruz, null değilse eskisini dönüyoruz.
+		}
+		return dersListesi;
+	}

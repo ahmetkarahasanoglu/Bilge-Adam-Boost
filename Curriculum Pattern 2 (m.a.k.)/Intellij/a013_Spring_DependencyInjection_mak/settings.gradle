@@ -1,0 +1,11 @@
+rootProject.name = 'a013_Spring_DependencyInjection_mak'
+include 'Java001'
+include 'Java002'
+include 'Java003'
+include 'Java003'
+include 'Java003'
+include 'Java002'
+include 'Java001'
+include 'Java004'
+include 'SpringFrameW'
+

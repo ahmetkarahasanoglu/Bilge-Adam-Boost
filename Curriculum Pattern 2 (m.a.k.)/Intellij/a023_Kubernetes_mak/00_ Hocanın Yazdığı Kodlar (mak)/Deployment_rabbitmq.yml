@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-rabbitmq
+spec:
+  replicas: 1 # number of pods that will run simultaneously
+  selector:
+    matchLabels:
+      team: developer-rabbitmq
+  template:
+    metadata:
+      name: pod-rabbitmq
+      labels:
+        team: developer-rabbitmq
+    spec:
+      containers:
+        - name: container-rabbitmq
+          image: rabbitmq:3-management # (hub.docker.com/_/rabbitmq -> "Setting default user and password" başlığı altında -> "rabbitmq:3-management")
+          resources:
+            limits:
+              cpu: 200m
+              memory: "512Mi" # 512Mi -> 512 mb ram
+          ports:
+            - containerPort: 5672 # ()
+            - containerPort: 15672
+          env:
+            - name: RABBITMQ_DEFAULT_USER # (hub.docker.com/_/rabbitmq -> "Setting default user and password" başlığı altında)
+              value: adminbilge # we're setting the username as 'adminbilge'
+            - name: RABBITMQ_DEFAULT_PASS # (hub.docker.com/_/rabbitmq -> "Setting default user and password" başlığı altında)
+              value: Aa123456** # we're setting the password.

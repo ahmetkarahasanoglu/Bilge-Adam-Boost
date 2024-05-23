@@ -1,0 +1,21 @@
+* METHODS OF STRING CLASS:
+.charAt(), .indexOf(), .lastIndexOf(), .substring(), .replace(), .split(), .startsWith(), .endsWith(), .equals(), .equalsIgnoreCase, .toLowerCase(), .toUpperCase(),
+
+Remember: You can use a 'for' loop and 'charAt(i)' to traverse on all the letters of a string.
+
+Note: While using the 'replace()' method; be aware that we have the ability to traverse over all the characters of a string for the aim of finding the target character we're searching for. Ex:
+str.replace(targetChar, newChar)
+-------------------------------
+* 'continue' keyword: is used in a loop. It skips the rest of the code in that lap and goes to the top of the loop (to the next lap of the loop).
+=======================================
+
+STREAM METHODS:
+* distinct(): eliminates duplicate elements. Ex:
+List<String> wordsWithDuplicates = Arrays.asList("apple", "banana", "orange", "apple", "grape", "banana");
+wordsWithDuplicates.stream().distinct().collect(Collectors.toList());
+
+* limit(): Sonsuz dögülerde işlemin kısıtlı kalmasını sağlamak için kullanılır. Döngü sayısını belirtir.
+* skip(n): fonksiyonun ilk n interasyonunu atlamasını sağlar.
+
+* sorted()
+  sorted(Comparator.reverseOrder())

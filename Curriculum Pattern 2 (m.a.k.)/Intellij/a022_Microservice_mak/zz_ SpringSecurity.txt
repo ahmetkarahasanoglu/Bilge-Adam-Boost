@@ -1,0 +1,2 @@
+* Projenin dependencies.gradle dosyasına spring securty'i ekleyip, ilgili yerde build.gradle'a da eklediğimizde; mikroservis'in application dosyasını run ettiğimizde, console'da bir password çıkar. Bunu, browser'da projemizi açtığımızda örneğin: localhost:portNumarası/api/v1/auth/findall yazdığımızda bizden username ve password isteyecektir, oraya yazıyoruz. Username: user - Password: intellij console'da yazan password. Bu, developer'ın kullanması için bir password'dür. 
+* localhost:portNumarası/logout -> logout yapar.

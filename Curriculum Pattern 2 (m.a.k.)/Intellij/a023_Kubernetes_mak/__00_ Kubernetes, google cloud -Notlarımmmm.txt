@@ -1,0 +1,145 @@
+Kubernetes, uygulama konteynırlarının orkestra edilmesi ve yönetimini sağlar.
+
+NOT: Şu pdf dosyasında kubernetes kodları ve anlatım var: a023_KubernetesBilgi-KodAnlatım_mak / kubernetes_dokuman.pdf
+
+Kubernetes'i kullanabilmek için google cloud hesabı açmak gerekir.
+Google Cloud Free Trial hesabı açılır. Kredi kartı talep edecektir, bir sanal kart kullanmak uygun olacaktır; içine 1 dolar kadar bakiye konmalıdır, google doğrulama için 1 dolar çekip tekrar yatırıyormuş.
+   Google Cloud -> Kubernetes Engine -> Kubernetes Cluster -> "Enable Kubernetes Api" gibi bi şey varmış burda???.
+Burda 'Create' yapılacak. Standart mod seç, (autopilot'ı seçme) -> Configure -> "Cluster basics" başlığı gelecek; Name: java6-cluster (veya başka bi şey olabilir). Control plane version: Static version.
+Soldaki menüden -> default pools -> Number of nodes: 1
+Soldaki menüden -> default pool -> (hemen altında->) Nodes. Series: E2. Machine type: e2-highmem-4 (4 vCPU, 32 gb memory).
+----
+
+KUBERNETES'İ KULLANMAK (GOOGLE CLOUD ÜZERİNDE):
+- Kubernetes clusters'ı görüntülediğimiz yerde cluster'ımızın en sağ tarafındaki üç noktaya basıp "Connect"e tıklıyoruz. Açılan pop-up pencerede "Run in cloud shell"e tıklıyoruz. Bir terminal ekranı çıkacak, hazır bir kod gelecek karşımıza: gcloud container clusters get-credentials java6-cluster --zone europe-west9-c --project yenijava6
+Bu kodu cloud shell komut ekranında çalıştırıyoruz. "Open Editor" butonuna basıyoruz. Bir kod editor ekranı çıkacak; sağ üstte çarpının yanındaki 'tam ekran' butonuna basıyoruz. Alttaki az önceki terminal ekranını çarpıya basıp kapatıyoruz. Kod editör ekranında "Open Folder" tıklıyoruz. Proje klasörümüze tıklayıp 'Open' butonuna tıklayıp açıyoruz. Yukardan 'Terminal' -> 'New Terminal':
+> kubectl get nodes (oluşturduğumuz 32 gb'lık node'umuzu gösterir)
+> kubectl get nodes -o wide (daha ayrıntılı bilgi verir)
+> kubectl describe pods nameOfThePod (pod'un detaylı bilgisini verir)
+--
+> kubectl config get-contexts (displays all contexts; clusters etc). Başında '*' olan cluster current cluster'dır.
+--
+docker'da postgresql çalıştırmak için hub.docker.com'dan bilgi edindik. hub.docker.com -> search: postgres
+--
+Google cloud'daki kod editörümüzde:
+> kubectl run bilge-postgresql --env="POSTGRES_PASSWORD=root" --image=postgres --port=5432 (pod oluşturur)
+> kubectl get pods (oluşturulan pod'u gösterir)
+BİLGİ: Bir pod'u silmek için:
+> kubectl delete pods nameOfThePod
+> kubectl get pods -w (watch demektir; pod'un durumunu sürekli olarak izleyip komut ekranında günceller)
+----
+
+YML DOSYASINA KUBERNETES KODU YAZMAK:
+Elle komut girerek pod'u yönetmek hantal ve zahmetlidir. '.yml' dosyasından yönetmek mantıklıdır.
+Google cloud'daki kod editöründe oluşturduğumuz 'Java6' proje klasörüne sağ tıklayıp yeni dosya oluşturuyoruz: Pod_postgresql.yml ismini verdik.
+Benim bilgisayarda Pod_postgresql.yml'de yazdığımız kod şu konumda mevcut: a023_KubernetesBilgi-KodAnlatım_mak\00_ Hocanın Yazdığı Kodlar (mak)/Pod_postgresql.yml
+--
+
+NOT: POD'DA KOMUT İLE VERİTABANI OLUŞTURMAK (DIŞARIYA AÇMADAN):
+> kubectl get pods
+> kubectl exec -it nameOfThePod -- bash (örneğin pod ismi şöyle olabilir: postgre-deployment-5c9fc...)
+> su postgres (switches to postresql user - it's about authorization)
+> createdb java6AUTHDB
+
+
+> clear (ekranı temizler - google cloud kod editöründe)
+
+yml dosyamızı devreye aldığımızda pod'daki değişikliği görmek için watch komutunu yazıyoruz:
+> kubectl get pods -w (bunu ayrı bir cloud shell siyah ekranında çalıştırıyoruz, değişiklikleri ordan görmek için)
+
+> kubectl apply -f Java6/Pod_postgresql.yml (Kubernetes'e konfigürasyonu yml dosyasından okumasını bildiriyoruz. Burda, Java'nın J'sini yazıp tab tuşuna bastığımızda kendisi tamamlamalı. '/'dan sonraki P'yi yazdıktan sonra da tab tuşuyla kendisi tamamlamalı. Pod'un çalıştığını bi yukarda yazdığım kod ekranında görebiliriz.)
+
+--
+oluşturduğumuz yml dosyasının yanında bir yml dosyası daha oluşturduk: Deployment_postgresql.yml . Kodu benim bilgisayarda mevuct. 
+Deployment objesi pod'larımızı yönetir; bizim belirlediğimiz koşullarda çalışır. 
+--
+> kubectl apply -f Java6/Deployment_postgresql.yml
+> kubectl get pods (to see the pod)
+
+Deployment objesi tüm sistemi takip eder, bir pod kapandığı zaman veya silindiği zaman yerine yenisini getirir.
+> kubectl delete pods deployment-postgres-766d7566c8-m8qpk (->son ifade pod'un ismidir. Burda pod'u sildiğimizde, diğer cloud shell ekranında "kubectl get pods -w" kodunu yazdığımız yerde, pod'un silindiğini ve hemen yerine yeni bir tanesinin oluşturulduğunu görürüz.)
+----
+
+Servis Objeleri:
+- LoadBalancer -> Dışardan erişimi sağlıyor.
+- ClusterIP -> Node içinde erişim
+- NodePort -> Node'lar arası erişim
+
+'Java6' proje klasöründe yeni bir yml dosyası oluşturuyoruz: Service_Loadbalancer_Postgresql.yml
+--
+> kubectl apply -f Java6/Service_Loadbalancer_Postgresql.yml
+> kubectl get services (oluşturduğumuz servislerin portlarını ve cluster ip'lerini gösterir)
+
+> kubectl describe services nameOfTheService
+
+----
+----
+PgAdmin'i açıyoruz. Server'a sağ tıkla -> Register -> Server. Bir isim veriyoruz server'a: "Java6Google". Connection sekmesinde hostname kısmına oluşturduğumuz loadbalancer'ın external ip adresini yazıyoruz (yukardaki 'get services' komutuyla elde ettiğimiz); örneğin bizim yazdığımız: 34.155.172.253 . Port kısmına loadbalancer'ın dahili port'unu yazıyoruz; örneğin bizim yazdığımız: 11111 . Password kısmına 'root' yazdık. Save butonuna bastık. Ve bağlanmış olduk. Java6Google'ın altındaki 'Databases'e sağ tıklayıp 'create database' diyoruz, 'Java6Auth' isminde bir veri tabanı oluşturduk biz.
+--
+
+> kubectl exec -it deployment-postgres-766d7566c8-n6f9f -- bash (uzaktaki postgresql veritabanının içine giriyoruz - veritabanının ismi daha farklı olacaktır kendi yaptığımda)
+> ls (veritabanının içindeki dosyaları gösterir)
+> su postgres
+> psql
+> \l (database listesini gösterir - oluşturduğumuz Java6Auth veritabanını görürüz)
+----
+----
+
+MONGODB BAĞLANTISI
+Google Cloud kod editöründe 'Java6' proje klasörümüzün altında 'Deployment_mongodb.yml' dosyasını oluşturduk (benim bilgisayarda mevcut).
+Google cloud shell komut ekranında:
+> kubectl apply -f Java6/Deployment_mongodb.yml
+> kubectl get pods
+
+ZİPKİN BAĞLANTISI
+Google Cloud kod editöründe 'Java6' proje klasörümüzün altında 'Deployment_zipkin.yml' dosyasını oluşturduk (benim bilgisayarda mevcut).
+Google cloud shell komut ekranında:
+> kubectl apply -f Java6/Deployment_zipkin.yml
+> kubectl get pods
+
+RABBİTMQ BAĞLANTISI
+Google Cloud kod editöründe 'Java6' proje klasörümüzün altında 'Deployment_rabbitmq.yml' dosyasını oluşturduk (benim bilgisayarda mevcut).
+Google cloud shell komut ekranında:
+> kubectl apply -f Java6/Deployment_rabbitmq.yml
+> kubectl get pods
+
+CONFIGSERVERGIT BAĞLANTISI
+yukarıdaki yml dosyalarından birini kopyala-yapıştır ile çoğaltıp ismini 'Deployment_configservergit.yml' yaptık.
+
+> kubectl apply -f Java6/Deployment_configservergit.yml
+
+> kubectl get pods -o wide (daha ayrıntılı bilgi verir podlara dair (mongo, postgre, rabbitmq, zipkin)
+
+> kubectl logs -f podName (spring kodu görüntülenir; ayağa kalkmış mı kalkmamış mı bakabiliriz. Ctrl+C ile bu moddan çıkarız.)
+--
+> kubectl apply -f Java6/Service_ClusterIP_ConfigServerGit.yml
+
+> kubectl get deployments (deployment'ları görüntüler)
+--
+
+> kubectl apply -f Java6/Deployment_auth_micro_service.yml
+--
+
+> kubectl apply -f Java6/Deployment_redis.yml
+
+NOT: Cloud'a yüklediğimiz bu deployment'larda bir kod değişikliği yapmamız gerekiyorsa, google cloud'daki ilgili yml dosyasında kod değişikliği yapıp; daha sonra cloud'daki deployment objesini silip tekrar yüklemeliz: Örneğin:
+> kubectl delete deployments deployment-auth
+> kubectl apply -f Java6/Deployment_auth_micro_service.yml
+----
+
+Kubernetes ortamındaki her bir unsurun (postgresql, redis, mongo vs.) önüne bir clusterIP tanımlamamız gerekir. Çünkü bu unsurlarda bir problem çıktığında ve yenilediğimizde ip'leri değişecektir ve problem çıkaracaktır. O yüzden cluster IP kullanmamız gerekir. Bir tanesini (postgresql) örnek olarak yazalım:
+> kubectl apply -f Java6/Service_ClusterIP_Postgresql.yml
+> kubectl get services
+> kubectl describe services clusterip-postgresql
+'--> gelen dökümde 'Endpoints' kısmında IP adresi ve port görünmeli (10.84.0.16:5432). Eğer böyle görünmüyor ve '-' görünüyorsa bağlanamamış demektir.
+
+BİLGİ: Google cloud panelinde burdaki cluster'ları vs. görsel olarak görebiliyoruz.
+
+Intellij'de projemizde 'Dockerfile' oluşturuyoruz. 
+Terminalde 'docker build' ile başlayan komutu yazıyoruz (bkz: docker notlarım), docker desktop'ta görünür hale gelen uygulamamızı, kenarındaki üç noktaya basıp, 'push to hub'a tıklıyoruz; docker hub'a yüklenir (uzun sürebilir, boyutu büyüktür).
+------
+
+Google cloud'daki uygulamamıza swagger arayüzüyle erişmek için browser'a:
+http://34.155.81.69:9090/swagger-ui/index.html (ip adres neyin ip adresi?: ana giriş loadbalancer'ının external IP'si olması lazım)
+
+http://34.155.81.69/auth/getmessage

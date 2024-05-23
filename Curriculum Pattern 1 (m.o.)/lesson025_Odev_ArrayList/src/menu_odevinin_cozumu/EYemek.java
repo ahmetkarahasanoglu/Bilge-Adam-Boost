@@ -1,0 +1,6 @@
+package menu_odevinin_cozumu;
+
+public enum EYemek {
+
+	PILAV, KURUFASULYE, NOHUT, DOLMA, TURLU, PATLICANKEBAP, PIRASA, BAMYA, MANTI, KARNIYARIK, SULUKOFTE, TAVUKSOTE
+}

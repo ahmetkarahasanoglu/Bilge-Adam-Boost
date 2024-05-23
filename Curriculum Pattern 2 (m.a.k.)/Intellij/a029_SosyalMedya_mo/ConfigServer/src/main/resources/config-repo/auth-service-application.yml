@@ -1,0 +1,38 @@
+server:
+  port: 7071
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411
+    service:
+      name: auth-service
+spring:
+#  security:
+#    user:
+#      name: user
+#      password: root
+  datasource:
+    url: jdbc:postgresql://localhost:5432/java6AUTHDB
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: root
+
+jwt:
+  secretkey: ${java6secretkey} # (windows ortam değişkenleri'nden çekiyoruz)
+  audience: ${java6audience}
+  issuer: ${java6issuer}
+
+rabbitmq:
+  exchange-auth: auth-exchange # --> this is a string value (to be used in RabbitMqConfig class)
+  registerkey: register-key
+  queueRegister: register-queue # -> bu ve yukardaki ikisi, register isteğini authMikro'dan userMikro'ya göndermek için kullancaz.
+  registermailkey: mail-key # -> bu ve alttakini farklı bir amaç için kullancaz: aktivasyon kodu göndermek için
+  registermailqueue: mail-queue

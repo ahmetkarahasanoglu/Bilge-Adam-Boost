@@ -1,0 +1,155 @@
+**** FUTBOL OYUNU ****
+- 2 adet takım
+- Her takımda 4 defans, 4 orta saha, 2 forvet oyuncusu 
+  bulunmaktadır.
+Bunlardan ayrı da bir kaleci bulunmaktadır. Kaleci sadece
+  kurtarma işlemlerinde görev almaktadır.
+  
+--- BİR FUTBOLCUDA: ---
+- ad soyad
+- forma no
+- dayanıklılık
+- hız
+- pas
+- şut
+- yetenek
+- kararlılık
+- dogalForm
+- şans
+  özellikleri vardır. Ayrıca defans, orta saha ve forvet 
+  oyuncularının kendilerine has özellikleri de vardır.
+  
+--- DEFANS OYUNCUSUNDA: ---
+- Pozisyon alma
+- Kafa
+- Sıçrama
+
+--- ORTA SAHA OYUNCUSUNDA: ---
+- Uzun Top
+- İlk Dokunuş
+- Top Sürme
+- Üretkenlik
+- Özel Yetenek
+
+--- FORVET OYUNCUSUNDA: ---
+- Bitiricilik
+- İlk dokunuş
+- Kafa
+- Özel yetenek
+
+--- KALECİDE: ---
+- kurtarış
+
+
+* Futbolcu sınıfı için oluşturulacak yetenekler: 50-100 arasında 
+  random olarak belirlenecek.
+* Defans sınıfı için oluşturulacak yetenekler 60-90 arasında
+  random olarak belirlenecek.
+* Orta saha sınıfı için oluşturulacak yetenekler 60-100 arasında
+  random olarak belirlenecek.
+* Forvet sınıfı için oluşturulacak yetenekler 70-100 arasında
+  random olarak belirlenecek.
+* Kaleci sınıfı için oluşturulacak yetenekler 65-100 arasında
+  random olarak belirlenecek.
+  
+  
+1) Oyun iki takım arasında oynanacaktır. Yazı tura atışı ile 
+   oyuna başlayacak takım belirlenir.
+2) Oyuna başlayacak takımdan rastgele bir oyuncu ile oyun
+   başlar ve
+3) Pas ver metodu çalışır.  3 adet başarılı pas ver metodu 
+   çalışmasından sonra
+4) Gol vuruşu metodu çalışır. Başarılı olursa skor değişir.
+5) Eğer pas ver metodu false dönerse (3 kere çalışacak 3'ünden
+   birinde false dönerse) top karşı takıma geçecektir. Buna
+   uygun bir metod yazınız.
+6) Gol vuruşu sonrasında başarılı olsa da olmasa da top yine
+   karşı takıma geçecektir.
+------
+   
+3) PAS VER METODU: için bir pas skoru hesaplanır. Bu pas skoruna
+  göre pasın başarılı olup olmadığı hesaplanır. Eğer skor 
+  65'den büyükse pas başarılıdır, değilse başarısız.
+  
+* Defans oyuncusu için hesaplanacak pas skoru:
+  Defans oyuncusu için bonus bir puan hesabı daha yapılır.
+  Bonus 0-4 arasında rastgele bir sayıdır.
+  Formül: pas*0.2 + yetenek*0.2 + dayanıklılık*0.1 + dogalForm*0.1 +
+    pozisyonAlma*0.1 + sans*0.2 + bonus
+  
+* Forvet oyuncusu için hesaplanacak pas skoru:
+  Forvet oyuncusu için bonus bir puan hesabı daha yapılır.
+  Bonus 1-6 arasında rastgele bir sayıdır.
+  Formül: pas*0.2 + yetenek*0.2 + ozelYetenek*0.2 +
+    dayanıklılık*0.1 + dogalForm*0.1 + sans*0.1 + bonus
+
+* Orta saha oyuncusu için hesaplanacak pas skoru:
+  Orta saha oyuncusu için bonus bir puan hesabı daha yapılır.
+  Bonus 1-8 arasında rastgele bir sayıdır.
+  Formül: pas*0.2 + yetenek*0.2 + ozelYetenek*0.2 +
+    dayanıklılık*0.1 + dogalForm*0.1 + sans*0.1 + bonus
+  
+  
+    
+4) GOL VURUŞU:
+  Gol vuruşu için yine gol skor hesaplanır. Her mevki için
+  ayrı bir formül vardır. 
+  Gol skoru 68'den buyu ise true döner.
+  
+* Defans oyuncusu için hesaplanacak gol skoru:
+  Defans oyuncusu için bonus bir puan hesabı daha yapılır.
+  Bonu 2-5 arasında rastgele bir sayı * dogalForm*0.075
+  Kurtarış -> karşı takım kalecisinden gelen kurarış skor değeri.
+  Formül: yetenek*0.3 + sut*0.2 + kararlilik*0.1 + sans*0.1 +
+  kafa*0.1 + dogalForm*0.1 + bonus - kurtaris
+
+* Orta Saha oyuncusu için hesaplanacak Gol skoru:
+Defans oyuncusu için bonus bir puan hesabı daha yapılır
+Bonus= 1 ile 6 arasında rastgele bir sayı * dogalForm*0.075
+Kurtarış=karşı takım kalecisinden gelen kurtarış skor değeri.
+yetenek*0.2+ozelYetenek*0.2+sut*0.2+ilkDokunus*0.1+kararlilik*0.1+sans*0.1+dogalForm*0.1+bonus-kurtarış
+
+* Forvet oyuncusu için hesaplanacak Gol skoru:
+Defans oyuncusu için bonus bir puan hesabı daha yapılır
+Bonus= 1 ile 5 arasında rastgele bir sayı * dogalForm*0.075
+Kurtarış=karşı takım kalecisinden gelen kurtarış skor değeri.
+yetenek*0.2+ozelYetenek*0.2+sut*0.1+ilkDokunus*0.1+kararlilik*0.1+sans*0.1+kafa*0.1+bitiricilik*0.2+dogalForm*0.1+bonus-kurtarış
+  
+* Kaleci kurtarış skor hesaplaması:
+  Bonus 1-5 arasında rastgele sayı * (dogalForm*0.025)
+  Skor = kurtaris*0.2 + kararlilik*0.1) + bonus
+  
+  
+  
+  Yukarıda verilen bilgiler ışığında gerekli sınıflar ve 
+  metotlar yazılacaktır. Uygulamada abstract class ve
+  1 interface'imiz olsun
+  
+
+1) İlk başta player sınıflarımızdan bir takım oluşturalım
+   ve bu takımı test sınıfında yazdıralım (sadece özellikler
+   olsun, metotlar olmasın. Not: kaleci ayrı bir özellik
+   olsun). her pozisyondan oyuncu üretmek için metot
+   yazılabilir. Oyuncuların ismi: defans1 defans2
+   defans3...  ortasaha1 ortasaha2...  forvet1 forvet2...
+   gibi olsun. Forma no'ları ise defans oyuncularından 
+   2'den başlasın, orta saha 6, forvet 10'dan başlasın.
+
+2) Player sınıflarımıza pas ile ilgili gerekli metotlarımızı yazalım test sınıfında pas skorlarımızı yazdıralım.
+3) Mac sınfında maçımız gerçekleşecek yukarıdaki bilgiler ışığında o sınıfta gerekli metotlar ve özellikleri adım 
+adım yazacağız
+4) Pas için 3 kez true dönup dönmediğini kontrol edelim NOT:BİR OYUNCU KENDİSİNE PAS ATAMAZ 
+bunun için bir metot oluşturabiliriz. her pas sonrasında Ev sahibi takımından 3 nolu futbolcu 5
+nolu futbolcuya pas verdi veya Ev sahibi takımından 3 nolu futbocunun pas girişmi basarısız gibi 
+ekrana çıktılar verilecektir.
+5) Bu formüllere gelen sonuca göre çalışan metot 3 kez başarılı olursa gol vuruşu metodu çalışır 
+herhangi birinde false dönerse takım değiştilir. (ikinci bir takım oluşturalım şimdilik ilk başta ev 
+sahibi takım 0 index de diğer takım 1.indexte olsun ev sahibi takım ile başlayalım )Şimdilik başarılı 
+olduğu kısma sadece gol vuruşu yapılıyor çıktısı verelim ve sonuçlarını test edelim
+6) Takım değiştirmek için bir metot yazalım.
+7) Golskoru ve gol vuruşu ile ilgili gerekli metotları yazalım ve test sınfında gol skorlarını yazdıralım kaleci 
+kurtarış skoru 0 olsun şimdilik
+8) Metotlarımızı biraz daha geliştirelim 3 başarılı pas sonucu gol vuruşu metodumuz çalışsın ve sonuçlarını test 
+edelim 
+9) Gol vurusu sonrası takım değiştileim ve değiştirdiğimiz takımı ekrana yazdıralım 
+10) Bunları bir dongu içerisinde 3 kez gerçekleştirelim. 

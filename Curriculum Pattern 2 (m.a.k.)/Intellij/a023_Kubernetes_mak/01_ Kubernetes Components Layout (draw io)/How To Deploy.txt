@@ -1,0 +1,11 @@
+Projenin her bir mikroservisi deploy edilecek:
+   İlgili mikroservisi, Intellij gradle menüsünden: 'MikroservisinAdı' -> Tasks -> build -> build.  Daha sonra build'in altındaki 'buildDependents'a da tıklıyoruz. 
+   Intellij'de soldaki dosya menüsünden, ilgili mikroservisin altındaki 'build' klasörü -> libs -> '....mikroservice-v.0.1.jar' dosyasına sağ tuş -> 'copy path/reference' -> 'path from repository root'
+   Terminale şu komutu yazıyoruz:
+> docker build --build-arg JAR_FILE=[dosyanın tam yeri] -t ahmetkarahasanoglu/monolitikapp:001 . --> (boşluktan sonra nokta var burda. '001' versiyon numarasıdır. 'ahmetkarahasanoglu' docker hub hesabımdır. 'monolitikapp' projenin adı)
+   Docker Desktop'ta görünür hale gelen uygulamamızı, kenarındaki üç noktaya basıp, 'push to hub'a tıklıyoruz; docker hub'a yüklenir (uzun sürebilir, boyutu büyüktür).
+   Google Cloud Shell'de, dosyalar bölümünde, ilgili mikroservise ait '.yml' dosyasını oluşturuyoruz. Daha sonra Google Cloud Shell'de şu komutu giriyoruz:
+> kubectl apply -f Java6/Deployment_auth_micro_service.yml (burda 'java6' google cloud shell'deki klasörün ismi)
+   Browser'da, cloud'daki mikroservis'e swagger'la ulaşmayı deniyoruz:
+34.155.81.69:9090/swagger-ui/index.html
+'--> auth controller / register denemesi yapabiliriz.

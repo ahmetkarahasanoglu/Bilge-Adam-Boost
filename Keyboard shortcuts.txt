@@ -1,0 +1,2 @@
+* Alt + Shift + A : Writing on different spots at the same time. And multiple selection.
+* F6 : Step over (when debugging)

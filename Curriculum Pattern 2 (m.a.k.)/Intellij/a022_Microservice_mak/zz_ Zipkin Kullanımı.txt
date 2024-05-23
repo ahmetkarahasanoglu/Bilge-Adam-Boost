@@ -1,0 +1,5 @@
+zipkin.io -> quickstart
+Orda yazan şu komutu PowerShell'de çalıştır:
+> docker run -d -p 9411:9411 openzipkin/zipkin
+- Docker Desktop'ta Containers kısmına gelecek bu zipkin.
+- Browser'da localhost:9411 yaz, zipkin ui açılır.

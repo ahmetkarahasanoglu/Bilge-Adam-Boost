@@ -1,0 +1,4 @@
+* Controller: Garson gibi düşünebiliriz. Kullanıcıyla ilk iletişime geçen, ve kullanıcıya bilgiyi sunan kısım.
+* Service: İşin mutfağı. Gerekli malzemeleri alıp harmanlayıp bir ürün çıkartan kısım.
+* Repository: Depomuzu yöneten kısım.
+* Utility: Herhangi bir sınıflandırmaya tabi değildir. Araçları içinde bulundurur. Biz verilerimizi (array'lerimizi) utility paketi içinde 'StaticValues' sınıfında tuttuk.

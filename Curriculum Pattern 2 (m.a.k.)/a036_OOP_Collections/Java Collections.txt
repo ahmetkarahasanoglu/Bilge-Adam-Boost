@@ -1,0 +1,28 @@
+--------------------------------------
+COLLECTIONS-ORTALAMA KULLANIM YOĞUNLUĞU:
+Bir projede genelde:
+- ArrayList -> %90
+- Queue     -> % 1
+- Stack	    -> % 1
+- Set	    -> % 2
+- Map	    -> % 6
+
+--------------------------------------
+* ARRAYLIST:
+  - Asenkron işlem yapar(default olarak asenkrondur, ayrıca senkron modu da vardır). Dizilerin kullanışlı halidir; esnek boyutludur.
+
+* VECTOR:
+  - Senkron işlem yapar. Eskidir. Modern Java'da pek kullanılmıyor.
+
+* SET:
+   - Tekil kayıt tutar. Tekrar eden kayıtlardan 1 tane tutar. (Örneğin bugün kaç tip ürün satılmış?). 
+  - Set bir interface olduğu için new'lenemez; bunun yerine bu interface'den miras alan HashSet, TreeSet new'lenebilir.
+  Not: 
+- HashSet, elemanları karışık sıralı bir şekilde tutar.
+- LinkedHashSet, elemanları eklendiği sırayla tutar..
+- TreeSet, elemanları küçükten büyüğe sıralı şekilde tutar. string'lerde a'dan z'ye sıralı şekilde tutar.
+
+* MAP:
+  - Key-Value şeklinde çalışır.
+  - Key: String, Integer vs. olabilir.
+  - Value: Herhangi bir değer olabilir; String, Integer, any class.

@@ -1,0 +1,5 @@
+CONFIG SERVER AYARLARININ GİTHUB'A YÜKLENMESİ:
+- Github'da bir repo oluştur (erişim seçeneği "private" olsun), projemizdeki modüllerin config server dosyalarını (.yml) bu repoya at.
+- Githubda bir token oluştur: sağ üst köşedeki profil resmi -> Settings -> Developer settings -> Personal access tokens -> tokens (classic) -> Generate new token (classic); 'Note' kısmını doldur, 'Select scopes' başlığı altında en üstteki 'repo'yu işaretle, 'Generate token'a bas. Token'ı gösterecek, bi yere kopyala-yapıştır not et.
+- Bu token'ı windows ortam değişkenlerine bir isimle kaydet.
+- Projemizde 'ConfigServerGit' modülünde 'application.yml'de 'password' kısmına ${ortam_değişkenlerine_kaydettiğimiz_isim} şeklinde yaz.

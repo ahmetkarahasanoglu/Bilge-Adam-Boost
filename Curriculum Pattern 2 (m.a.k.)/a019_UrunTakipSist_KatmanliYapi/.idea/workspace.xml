@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d38da1ca-3de8-46e6-9982-a4c4c6717eaf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Intellij/a005_Thread_Kavrami/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij/a005_Thread_Kavrami/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij/a005_Thread_Kavrami/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij/a005_Thread_Kavrami/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij/a006_CleanCode_DesignPattern/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij/a006_CleanCode_DesignPattern/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij/a006_CleanCode_DesignPattern/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Intellij/a006_CleanCode_DesignPattern/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/src/pckge/ErrorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/src/pckge/ErrorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/src/pckge/Liman.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/src/pckge/Liman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/src/pckge/LimanAppException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/src/pckge/LimanAppException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/src/pckge/Uygulama.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/src/pckge/Uygulama.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038/src/pckge/Yuk.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Curriculum Pattern 1 (m.o.)/lesson038_tryCatch_exercise/src/pckge/Yuk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ebook Sources/Books About Java.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/src/main/java/com/ahmet/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/src/main/java/com/ahmet/log_islemleri/DosyaIslemleri.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/src/main/java/com/ahmet/log_islemleri/Log.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/InputOutput/src/main/java/com/ahmet/log_islemleri/Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/RunnerOdev.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/Runner_ExceptionList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/ozel_istisnalar/ErrorType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/ozel_istisnalar/OgrenciException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/ozel_istisnalar/Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/throw_example/Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/throw_example/YumurtaUretim.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/throw_odev_sales/ErrorType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/throw_odev_sales/RunnerSales.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/throw_odev_sales/SalesException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/throw_odev_tchrs/ErrorTypeEticaret.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/throw_odev_tchrs/EticaretException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/JavaExceptions_Istisnalar/src/main/java/com/ahmet/throw_odev_tchrs/Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/src/main/java/com/ahmet/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/LocalDateTime/src/main/java/com/ahmet/constants/MyDateTime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/src/main/java/com/ahmet/Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/src/main/java/com/ahmet/Urun.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/src/main/java/com/ahmet/ornekler/Ornek1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/src/main/java/org/randomuser/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/StreamApiExamples/src/main/java/org/randomuser/Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Intellij/egitimrepo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Intellij/egitimrepo" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2bzEmCCj2NdiHdD4CNUzSe8CF54" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/COURAGE/DERSLERIM/Software Lesson/Java Lesson/015_Questions_(m_oztrk)"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d38da1ca-3de8-46e6-9982-a4c4c6717eaf" name="Changes" comment="" />
+      <created>1707209663808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707209663808</updated>
+    </task>
+    <servers />
+  </component>
+</project>

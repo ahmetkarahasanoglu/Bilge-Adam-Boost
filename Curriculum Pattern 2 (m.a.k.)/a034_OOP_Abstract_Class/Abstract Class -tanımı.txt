@@ -1,0 +1,14 @@
+Abstract classes in Java are blueprints for other classes. They're like a template that defines methods without necessarily implementing them. These classes can have both regular methods and abstract methods.
+
+Mantık şudur: Biz üst sınıf olarak kullandığımız abstract sınıfından bir nesne üretmek istemiyoruzdur, ancak onun alt sınıflarından nesne üretmek istiyoruzdur (örneğin: futbolcu sınıfından üretmek istemiyoruz, ama defans, orta saha, ve forvet sınıflarından üretmek istiyoruz). Bu durumda üst sınıfı abstract (soyut) olarak tanımlarız. Bir blueprint olarak düşünebiliriz bu üst sınıfı.
+----------
+
+* Abstract Sınıflar
+
+* Metotlarda abstract (abstract sınıflar içerisinde 'abstract metotlar'): 
+   - Abstract sınıftaki abstract metotları(gövdesiz metotlar), miras alan alt sınıfların override yapması zorunludur [tıpkı interface'lerdeki metotlar gibi]
+   - Abstract sınıftaki normal metotları da alt sınıflar inheritance mantığında miras alırlar.
+
+
+
+   - Abstract sınıflardan new'lenerek nesne oluşturulamaz, hata verir.

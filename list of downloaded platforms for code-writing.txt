@@ -1,0 +1,6 @@
+* jdk-21_windows-x64_bin.msi [Oracle - java development kit]
+* Apache-NetBeans-19-bin-windows-x64.exe
+* eclipse-inst-jre-win64.exe
+* ideaIC-2023.2.5.exe [jetbrains.com -Intellij Idea]
+--------------------------------------------
+

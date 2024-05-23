@@ -1,0 +1,37 @@
+GITHUB'DA 'NEW ORGANIZATION' KURUP BAŞKALARINI DAVET ETMEK:
+* Github'da oturum aç.
+* Sağ üst köşedeki '+' butonuna bas. -> 'New Organization' -> Create a free organization
+...
+* Başkalarını davet et.
+* Create a new repository
+* '--> Bu repository, diğer katılımcıların profiline de düşer.
+
+***PROJEDE KOD YAZMAK, MERGE ETMEK:***
+* Terminalde:
+> cd "proje/klasörünün/konumu"
+> git init --> (.git klasörünü oluşturur)
+> git remote add origin https://github.com/my-user-name/project-name.git
+'--> (bu adresi 'origin' diye isimlendirdiğimiz değişkene atıyoruz).
+> git add . --> (tüm projeyi yüklesin; yüklemek için önbelleğe atıyo)
+> git status --> (şu anki durumu gösterir)
+> git branch --> (hangi branch'de olduğunuzu gösterir)
+> git commit -m "ahmet first commit"
+> git push origin master --> (master branch'i olduğunu belirtiyoruz)
+----
+
+NOT:
+Her sabah, projenin güncel hâlini github'dan çekip öyle çalışmamız gerekir (başkaları projede değişiklik yapmış olabilir). Bunun için:
+> git pull origin master
+
+Github'da 'Issues' kısmında görevlerin belirlenip kişilere ataması yapılabiliyor.
+Pull Request (which is a merge request to the project on github); pull request yaparken Issues'da sana atanmış olan görevi belirtebiliyorsun.
+----
+
+> cd "projeninBilgisayaraKlonlanacağıKonum"
+> git clone https://github.com/my-user-name/project-name.git --> (projeyi bilgisayara klonladık)
+'--> Bilgisayarımızda projeye yeni kod yazıyoruz veya dosya ekliyoruz.
+> cd "klonlanıpİndirilenProjeninİçineGirerekKonumuYaz"
+> git add .
+> git commit -m "yeni html dosyası eklendi"
+> git push origin myNewBranch
+----

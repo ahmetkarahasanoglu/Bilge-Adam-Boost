@@ -1,0 +1,11 @@
+rootProject.name = 'a028_SosyalMedya_mo'
+include 'AuthService'
+include 'UserService'
+include 'AuthService:ConfigServer'
+findProject(':AuthService:ConfigServer')?.name = 'ConfigServer'
+include 'ConfigServer'
+include 'ConfigServerGit'
+include 'ApiGatewayService'
+include 'MailService'
+include 'ElasticService'
+

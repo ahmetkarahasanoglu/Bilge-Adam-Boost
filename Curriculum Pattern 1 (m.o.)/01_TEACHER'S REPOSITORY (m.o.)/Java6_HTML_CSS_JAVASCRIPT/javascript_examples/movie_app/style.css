@@ -1,0 +1,33 @@
+.card-body-2 {
+    display: flex;
+    overflow: hidden;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 50px;
+}
+
+.mainSum {
+    position: relative;
+    overflow: hidden;
+    background-color: aliceblue;
+}
+
+.sum {
+    position: absolute;
+    top: 10px;
+    background-color: aliceblue;
+    opacity: 0.8;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: 1s ease-in;
+    width: 100%;
+    height: 100%;
+}
+
+
+.mainSum:hover .sum {
+    transform: translateY(0);
+    transition: 1s ease-in;
+}

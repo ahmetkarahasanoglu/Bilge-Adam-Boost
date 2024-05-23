@@ -1,0 +1,7 @@
+/**
+ * Project Lombok -> kolaylık sağlayan bir eklenti. Otomatik getter&setter, constructor, toString, hashCode oluşturuyor.
+ *   - Intellij'de Ayarlar'da plugin kısmından ekliyoruz.
+ *   - Bağımlılıklarını Maven Repository sitesinden alıp build.gradle'a ekliyoruz. 2 satır olarak yazdık:
+implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+ */

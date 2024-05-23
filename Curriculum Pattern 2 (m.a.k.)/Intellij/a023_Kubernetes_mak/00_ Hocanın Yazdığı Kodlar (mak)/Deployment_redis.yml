@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-redis
+spec:
+  replicas: 1 # number of pods that will run simultaneously
+  selector:
+    matchLabels:
+      team: developer-redis
+  template:
+    metadata:
+      name: pod-redis
+      labels:
+        team: developer-redis
+    spec:
+      containers:
+        - name: container-redis
+          image: redis # (docker hub -> 'redis'i aratıp bulduk; ordan baktık)
+          resources:
+            limits:
+              cpu: 500m
+              memory: "1024Mi" # 1024Mi -> 1024 mb ram
+          ports:
+            - containerPort: 6379

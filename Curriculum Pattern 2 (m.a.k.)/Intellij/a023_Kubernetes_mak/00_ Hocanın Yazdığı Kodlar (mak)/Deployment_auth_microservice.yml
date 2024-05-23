@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-auth
+spec:
+  replicas: 1 # number of pods that will run simultaneously
+  selector:
+    matchLabels:
+      team: developer-auth
+  template:
+    metadata:
+      name: pod-auth
+      labels:
+        team: developer-auth
+    spec:
+      containers:
+        - name: container-auth
+          image: javaboost2/java6auth:v.0.1 # (docker hub'ımızda java6configservergit'e tıklayıp burdaki "Docker commands" kısmında görebiliriz bu ismi. Versiyon ise aynı yerde "Tags" bölümünde en üstte yazan versiyondur)
+          resources:
+            limits:
+              cpu: 500m
+              memory: "1024Mi" # 1024Mi -> 1024 mb ram
+          ports:
+            - containerPort: 9090
+          env:
+            - name: CONFIG_URL
+              value: "http://10.88.12.89:8888" # ClusterIP'nin IP numarası ve Port numarası.  (iki noktanın öncesindeki ip adresini şurdan aldık: google cloud shell editörde:  kubectl get pods -o wide  -> burda "clusterip-configservergit"in karşısında yazan ip'yi kopyalayıp buraya yapıştırdık) ||| 8888 -> config server'la bağlantı kuran ClusterIP'nin port numarası.
+            - name: JAVA_SECRETKEY # bunu şurda kullanıyoruz (çekiyoruz) : ConfigServer / auth-micro-service-application.yml  ||| (bu değişkenin karşılığı bi alt satırda)
+              value: "1234"
+            - name: JAVA6_ISSUER
+              value: "bilgejava6"
