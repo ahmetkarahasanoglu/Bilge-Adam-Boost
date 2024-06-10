@@ -1,0 +1,33 @@
+NOT: Bu React ön yüzünü, şu arka yüz ile kullandım: E:\COURAGE\DERSLERIM\Software Lesson\Java Lesson\Advanced 2\INTELLIJ CODES !!!!!!!! ################\a015_MonolitikMimariDeneme
+
+**** TERMINAL COMMANDS: ****
+* Creating React App:
+$ cd "projectLocation"
+$ npx create-react-app musteriapp
+
+--
+* React Router installation (reactrouter.com) [Hangi path'i çağırdığınızda hangi sayfa gösterilsin'i ayarlamak için]:
+$ cd "projectLocation"
+$ npm install react-router-dom localforage match-sorter sort-by 
+
+--
+* Material UI: ready-made components for React. Installation (mui.com)
+[ALREADY AVAILABLE IN 'package.json' - just do '> npm install']
+$ cd "projectLocation"
+$ npm install @mui/material @emotion/react @emotion/styled
+
+'--> for styled-components of Material UI; we installed this package:
+$ npm install @mui/material @mui/styled-engine-sc styled-components
+
+------------------------------------
+Bir MaterialUI template (kullandık): dashboard template (kodları kopyala-yapıştır yaparak kullandık):
+-> https://mui.com/material-ui/getting-started/templates/ --> Dashboard
+'--> also install these packages:
+$ npm install @mui/icons-material
+$ npm install @mui/x-charts
+------------------------------------
+* React'ta State Yönetimi İçin Kullanılanlar:
+- hooks
+- state
+- Redux Toolkit (kullanışlı bir araç)
+- Mobx

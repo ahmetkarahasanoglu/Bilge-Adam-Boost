@@ -1,0 +1,21 @@
+* Docker Program Konsolunda:
+  - "Images" bölümünde yüklediğimiz şeyler bilgisayarımızda yer kaplar.   - "Containers"da yüklediğimiz şeyler hdd'de yer kaplamaz, sadece çalışır, Ram'den ve CPU'dan kullanır.
+---------------------------
+
+DOCKER İLE IMAGE DOSYASI OLUŞTURMAK:
+Dockerfile: Projemizin root klasöründe oluştururuz; uzantısı yoktur (Dockerfile). Docker'ın, ihtiyacınız olan işletim sistemi ve içinde olmasını istediğiniz uygulamalar ile kurulmasını sağlamak için kullandığı dosyadır. Bununla imaj oluşturursunuz ve sizin işlerinizi kolaylaştırır.
+Gerekli olan şeyler:
+1- İçinde jdk olan bir işletim sistemi örneği
+2- *.jar dosyasının kopyalanması
+3- jar dosyasının çalıştırılması
+
+TERMİNAL'DEN DOCKERFILE İLE IMAGE DOSYASINI ÇALIŞTIRMAK:
+Öncelikle ConfigServerGit 'Gradle' menüsünden build edilmiş olmalı. "Dosyanın tam yeri" için, Intellij'de sol taraftaki dosya görüntüleyicisinden ConfigServerGit -> 
+build -> libs -> ConfigServerGit-v.0.1.jar  dosyasına sağ tıkayıp 
+'Copy Path/Reference' -> 'Path from repository root' tıklıyoruz.
+
+> docker build --build-arg JAR_FILE=[dosyanın tam yeri] -t ahmetkarahasanoglu/monolitikapp:001 . --> (boşluktan sonra nokta var burda. '001' versiyon numarasıdır. 'ahmetkarahasanoglu' docker hub hesabımdır.)
+
+İMAJ HALİNE GELEN UYGULAMAYI RUN ETMEK:
+> docker run ahmetkarahasanoglu/monolitikapp:001
+--
