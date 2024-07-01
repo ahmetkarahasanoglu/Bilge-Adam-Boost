@@ -22,7 +22,8 @@ public class RunnerBank {
 		hesap.musteri_id = 1; // bu ID'yi müşteriler arasında (musteri.id) aratıp bulmamız gerekir.
 		
 /*
- * 1- [yukardaki yöntem] Birbiri ile ilişkilii dataları, sınıfları İlişkilendirmek
+ * 1- [yukardaki yöntem] Birbiri ile ilişkilii dataları, sınıfları
+ * ilişkilendirmek
  * için genellikle çoklu tarafta tekil tarafa ait bir id ile
  * atama yapılır . En çok uygulanan yöntemdir.
  * NOT: Bu yöntem ile ilişkiler arasında bilgi aramak için enaz 2

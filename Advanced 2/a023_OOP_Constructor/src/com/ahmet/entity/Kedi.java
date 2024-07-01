@@ -17,7 +17,7 @@ public class Kedi {
 	 * Constructor'ların en önemli özelliği sınıfa ait bir nesnenin
 	 * referansını döner.
 	 */
-	public Kedi() { // constructor
+	public Kedi() { // default constructor (parametresiz)
 		System.out.println("Constructor çalıştı.");
 		agirlik = 5; // kedi nesnesi oluştuğunda otomatik olarak var olacak özellikler.
 		tur = "Ankara";

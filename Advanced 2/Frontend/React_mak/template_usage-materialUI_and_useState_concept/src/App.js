@@ -43,8 +43,7 @@ function App() {
     }, [])
 
     return (
-        <>
-            {/* <Home /> */}
+        <>  
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={isLogin ? <Home /> : <Login />} />  {/* React Router kullanıyoruz buralarda (hangi path girildiğinde hangi sayfaya gidileceği). (örneğin bir anchor tag'i bu path'e yönlendirebiliriz) (react-router-dom paketini import ettik yukarda) */}

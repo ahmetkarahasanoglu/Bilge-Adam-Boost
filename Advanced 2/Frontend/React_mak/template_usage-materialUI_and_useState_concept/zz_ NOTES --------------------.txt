@@ -1,4 +1,4 @@
-NOT: Bu React ön yüzünü, şu arka yüz ile kullandım: E:\COURAGE\DERSLERIM\Software Lesson\Java Lesson\Advanced 2\INTELLIJ CODES !!!!!!!! ################\a015_MonolitikMimariDeneme
+NOT: Bu React ön yüzünü, şu arka yüz ile kullandım: E:\COURAGE\DERSLERIM\Software Lesson\Java Lesson\Advanced 2\INTELLIJ CODES\a015_MonolitikMimariDeneme
 
 **** TERMINAL COMMANDS: ****
 * Creating React App:
@@ -26,7 +26,7 @@ Bir MaterialUI template (kullandık): dashboard template (kodları kopyala-yapı
 $ npm install @mui/icons-material
 $ npm install @mui/x-charts
 ------------------------------------
-* React'ta State Yönetimi İçin Kullanılanlar:
+* Genel Bilgi: React'ta State Yönetimi İçin Kullanılanlar:
 - hooks
 - state
 - Redux Toolkit (kullanışlı bir araç)

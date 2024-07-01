@@ -8,7 +8,7 @@ public class Kedi {
  * state -> attribute veya property.
  * 
  * Bir kedinin yaşını sınıf içinde nasıl saklarsınız?
- *   Değişkenlerse saklarsınız.
+ *   Değişkenlerle saklarsınız.
  * Aksiyonları da metotlarla tanımlarsınız.
  */
 	int yas;
