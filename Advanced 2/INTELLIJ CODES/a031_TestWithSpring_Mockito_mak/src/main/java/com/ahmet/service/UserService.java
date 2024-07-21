@@ -14,14 +14,14 @@ public class UserService {
 
     private final IUserRepository userRepository;
 
-    public void save(User user) {
-        Optional<User> optionalUser = userRepository.findOptionalByAd(user.getAd());
+    public User save(User user) {
+        Optional<User> optionalUser = userRepository.findOptionalByAd(user.getAd()); // userRepository'yi soyutlamamız lazım (Unit Test gereği); dışarıdan enjekte olan bir şey, onu test etmek istemiyoruz, bu metodu ilgilendirmiyor.
         if(optionalUser.isPresent()) {
             throw new RuntimeException("Bu isimde bir kullanıcı zaten var.");
         }else if(user.getAd()==null) {
             throw new RuntimeException("Kullanıcı adı boş olamaz.");
         }
-        userRepository.save(user);
+        return userRepository.save(user); // userRepository'yi soyutlamamız lazım (Unit Test gereği); dışarıdan enjekte olan bir şey, onu test etmek istemiyoruz, bu metodu ilgilendirmiyor.
     }
 
     public List<User> getAll() {

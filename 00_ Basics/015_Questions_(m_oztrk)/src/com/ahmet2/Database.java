@@ -23,6 +23,7 @@ public class Database {
 		kullanici2.id = uzunluk;
 		kullaniciListesi[1] = kullanici2;
 		uzunluk++;
+
 		Kullanici kullanici3 = new Kullanici();
 		kullanici3.email = "yasin@gmail.com";
 		kullanici3.isim = "Yasin";
