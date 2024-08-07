@@ -46,6 +46,7 @@ public class Runner_ExceptionList {
                 System.out.println("Her durumda çalışan kısım.");
             }
         }while(isException);
+
         System.out.println("PROGRAM SONLANDI.");
 
     }//MAIN ENDS HERE ------

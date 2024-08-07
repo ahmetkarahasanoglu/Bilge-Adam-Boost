@@ -10,5 +10,6 @@ import org.mapstruct.factory.Mappers;
 public interface IFollowMapper {
 
     IFollowMapper INSTANCE= Mappers.getMapper(IFollowMapper.class);
+
     Follow toFollow(final CreateFollowRequestDto dto, final String userId);
 }

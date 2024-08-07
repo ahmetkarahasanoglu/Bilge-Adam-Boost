@@ -20,6 +20,6 @@ public class Club {
     @OneToMany(mappedBy = "club")
     List<Player> playerList;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL) // [owning side is 'Club']. (any changes that is made to a Club entity (saving, updating, deleting) will be cascaded to the associated League entity)
     League league;
 }

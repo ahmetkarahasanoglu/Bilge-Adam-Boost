@@ -95,7 +95,7 @@ public class Musteri {
      * To use other classes in an entity --> '@Embedded'
      * 'Iletisim' sınıfını tanımladığımız class'da '@Embeddable' şeklinde etiketleriz class'ı.
      * Not: Ayrı bir tablo oluşturmaz Iletisim sınıfının verileri için (veritabanında). Mevcut tabloya yeni sütunlar ekleyerek oluşturur (tblmusteri tablosuna)
-     * '--> Şu mantığa benziyo: miras alıp içine ekleme gibi.
+     * '--> Su mantığa benziyo: miras alıp içine ekleme gibi.
      */
     @Embedded
     Iletisim iletisim;

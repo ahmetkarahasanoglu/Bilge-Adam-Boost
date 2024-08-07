@@ -20,10 +20,11 @@ public class Runner {
          * 2- ilgili metodu try-catch'e alarak sarmalarsınız.
          *    Örneğin:
          */
+
         try {
             System.out.println(yy.yumurtaSay_Checked(kumesNo));
         }catch(Exception exception) {
-            System.out.println("Hata yakalandı (checked exception).");
+            System.out.println("Hata yakalandı (checked exception). --> " + exception.getMessage());
         }
 
 

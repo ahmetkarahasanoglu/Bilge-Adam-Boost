@@ -134,7 +134,7 @@ public class CriteriaUsing {
     public void groupBy() {
         /**
          * Adı aynı olan müşterilerin sayıları nedir?
-         * select ad, count(*), sum(?mesela) frum tblmusteri group by ad
+         * select ad, count(*), sum(?mesela) from tblmusteri group by ad
          */
         CriteriaQuery<Tuple> criteria = builder.createQuery(Tuple.class);
         Root<Musteri> root = criteria.from(Musteri.class);

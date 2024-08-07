@@ -29,7 +29,8 @@ public class RunnerOdev {
          * [3,5,7,9,11] -> size = 5
          * Hata mesajında index:-1 deniyorsa dizi boş demektir.
          * max index -> size-1
-         * NullPointerException.
+         *
+         * NullPointerException:
          * Var olmayan bir değerin içeriğine ulaşmaya çalıştığınızda
          * olur.
          */

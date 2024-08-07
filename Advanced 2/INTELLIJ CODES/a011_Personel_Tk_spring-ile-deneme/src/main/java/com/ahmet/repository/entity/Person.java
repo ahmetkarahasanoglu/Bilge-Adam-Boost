@@ -1,8 +1,7 @@
 package com.ahmet.repository.entity;
 
+import jakarta.persistence.*;
 import lombok.*;
-
-import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -27,7 +26,7 @@ public class Person {
      * oluşur otomatik şekilde)
      */
     @OneToMany(cascade = CascadeType.ALL) // 'CascadeType.ALL' means that all of the operations (persist, merge, remove, refresh, detach) are cascaded from the parent entity (Person) to the related entity (Address). This prevents the 'IllegalStateException' caused by 'hibernate.TransientObjectException'. This exception occurs when you try to save an entity (Person) that references another entity (Address) which has not been saved yet.
-    @JoinTable(name = "tbl_personel_adres_iliski",
+    @JoinTable(name = "tbl_personel_adres_iliski", // !!!! Burda ayrı bir tabloda ilişkinin (entity'lerin id'lerinin) tutulmasını istiyoruz. Tablonun ismi "tbl_personel_adres_iliski" olsun dedik.
                joinColumns = @JoinColumn(name = "personelid"), // alan adlarını değiştiriyoz.
                inverseJoinColumns = @JoinColumn(name = "adresid"))
     List<Address> addresses;

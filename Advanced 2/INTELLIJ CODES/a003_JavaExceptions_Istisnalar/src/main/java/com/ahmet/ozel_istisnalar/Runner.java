@@ -18,6 +18,7 @@ public class Runner {
             int sayi = sc.nextInt();
         }catch(Exception exception) {
             throw new OgrenciException(ErrorType.ERROR_NOTFOUND_BYID);
+//            System.out.println("This is catch block.");
         }
 
     }//MAIN ENDS HERE -------
